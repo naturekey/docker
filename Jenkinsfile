@@ -1,10 +1,10 @@
-def dockerImageTag = "projectkspace/mydimages:new-${BUILD_NUMBER}"
+def dockerImageTag = "suguksops/projectimages:new-${BUILD_NUMBER}"
 
 node {
    
     stage('Checkout') {
         
-        checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/keyspaceits/docker.git']])
+        checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/naturekey/docker.git']])
        
     }
     stage('DockerImageBuild') {
